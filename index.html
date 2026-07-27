@@ -319,15 +319,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
 window.dataLayer = window.dataLayer || [];
 
-document.getElementById("resume-btn").addEventListener("click", function () {
-  dataLayer.push({
-    event: "resume_download",
-    button_name: "Resume",
-    page_type: "Home"
+document.addEventListener("DOMContentLoaded", function () {
+
+  document.querySelectorAll(".cta-outline, .btn-secondary").forEach(function(btn) {
+
+    btn.addEventListener("click", function () {
+
+      dataLayer.push({
+        event: "resume_download",
+        button_name: this.textContent.trim(),
+        page_type: "Home"
+      });
+
+      console.log("Resume event pushed");
+    });
+
   });
+
 });
-</script>
-<script>
+</script><script>
 window.dataLayer = window.dataLayer || [];
 
 (function () {
