@@ -1,0 +1,30 @@
+# Block specific bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: GermCrawler
+Disallow: /
+
+User-agent: Sogou
+Disallow: /
+
+# Explicitly allow GPTBot, ChatGPT, and PerplexityBot
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# General rules for all other bots
+User-agent: *
+Disallow: /*?utm_*
+Disallow: /*?gclid*
+Disallow: /*?fbclid*
+
+Allow: /
+
+# Sitemap
+Sitemap: https://srilakshmiportfolio.online/sitemap.xml
